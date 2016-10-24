@@ -31,6 +31,7 @@ public class MyDialog extends Activity implements DialogInterface.OnClickListene
             AlertDialog alertDialog=(AlertDialog)dialogInterface;
             EditText text=(EditText)alertDialog.findViewById(R.id.editText_prompt);
             String content=text.getText().toString().trim();
+            //传递信息
             Intent intent=new Intent(this,MainActivity.class);
             intent.putExtra("label",content);
             startActivity(intent);
