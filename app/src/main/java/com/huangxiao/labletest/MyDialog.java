@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
@@ -13,13 +14,24 @@ import android.widget.EditText;
  * Created by Abbey on 2016/10/24 0024.
  */
 
-public class MyDialog extends Activity implements DialogInterface.OnClickListener {
-    public void onShowPromptDialog(View v){
-        LayoutInflater layoutInflater=LayoutInflater.from(this);
-        View view=layoutInflater.inflate(R.layout.prompt_view,null);
+public class MyDialog extends Activity implements DialogInterface.OnClickListener  {
 
-        AlertDialog.Builder builder=new AlertDialog.Builder(this);
+    public AlertDialog.Builder builder;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        onShowPromptDialog();
+    }
+
+    public void onShowPromptDialog(){
+        LayoutInflater layoutInflater=LayoutInflater.from(this);
+        View view=layoutInflater.inflate(R.layout.add_person_laybel,null);
+
+        builder = new AlertDialog.Builder(this);
         builder.setView(view);
+        builder.setIcon(R.mipmap.ic_launcher);
+        builder.setTitle("添加标签");
         builder.setPositiveButton("确定",this);
         builder.setNegativeButton("取消",this);
         builder.create().show();

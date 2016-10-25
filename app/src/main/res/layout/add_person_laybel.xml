@@ -3,18 +3,19 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/promptmessage"
-        android:layout_marginLeft="20dp"
-        android:text="输入新的标签"
-        android:gravity="left"/>
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/promptmessage"-->
+    <!--android:layout_marginLeft="20dp"-->
+    <!--android:text="输入新的标签"-->
+    <!--android:gravity="left"/>-->
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editText_prompt"
+        android:hint="请在这儿输入"
         android:layout_marginLeft="20dp"
         />
 </LinearLayout>

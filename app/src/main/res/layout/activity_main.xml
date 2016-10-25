@@ -54,7 +54,7 @@
                 android:orientation="vertical"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:fillViewport="true">
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:weightSum="1">
@@ -65,17 +65,17 @@
                         android:gravity="left"
                         android:text="个人标签"
                         android:padding="16dp"
+                        android:layout_alignParentStart="true"
                         android:id="@+id/person_center_label"/>
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="12sp"
-                        android:gravity="center"
-                        android:layout_gravity="end"
+                        android:layout_alignParentEnd="true"
                         android:text="添加标签"
                         android:id="@+id/add_person_label" />
-                </LinearLayout>
+                </RelativeLayout>
 
                 <com.pinger.library.FlowLayout
                     app:width_space="10dp"
